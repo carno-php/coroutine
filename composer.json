@@ -1,0 +1,30 @@
+{
+  "name": "carno-php/coroutine",
+  "license": "MIT",
+  "require": {
+    "php": "^7.2",
+    "carno-php/promise": "^1.0",
+    "carno-php/timer": "^1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Carno\\Coroutine\\": "src"
+    },
+    "files": [
+      "src/cmds.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Carno\\Coroutine\\Tests\\": "tests"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}
