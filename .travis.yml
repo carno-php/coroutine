@@ -4,7 +4,7 @@ php:
 - '7.2'
 
 install:
-- pecl install swoole
+- yes '' | pecl install swoole
 - composer install
 
 script: ./vendor/bin/phpunit tests --repeat 100
