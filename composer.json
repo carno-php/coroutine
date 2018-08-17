@@ -7,7 +7,7 @@
     "carno-php/timer": "^1.0"
   },
   "require-dev": {
-    "phpunit/phpunit": "~6"
+    "phpunit/phpunit": "~7"
   },
   "autoload": {
     "psr-4": {
@@ -22,6 +22,7 @@
       "Carno\\Coroutine\\Tests\\": "tests"
     }
   },
+  "minimum-stability": "dev",
   "extra": {
     "branch-alias": {
       "dev-master": "1.0-dev"
