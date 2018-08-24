@@ -8,6 +8,8 @@ composer require carno-php/coroutine
 
 # Concepts
 
+> [Cooperative multitasking using coroutines (in PHP!)](https://nikic.github.io/2012/12/22/Cooperative-multitasking-using-coroutines-in-PHP.html)
+
 ### yield values
 
 #### Generator

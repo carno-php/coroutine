@@ -7,4 +7,10 @@ install:
 - yes '' | pecl install swoole
 - composer install
 
-script: ./vendor/bin/phpunit tests --repeat 100
+script:
+- php vendor/bin/phpunit tests --repeat 100
+
+after_success:
+- composer require --dev php-coveralls/php-coveralls
+- php vendor/bin/phpunit tests --whitelist src --coverage-clover coverage.xml
+- php vendor/bin/php-coveralls -x coverage.xml -o coveralls.json
