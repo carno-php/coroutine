@@ -6,9 +6,6 @@
     "carno-php/promise": "^1.0",
     "carno-php/timer": "^1.0"
   },
-  "require-dev": {
-    "phpunit/phpunit": "~7"
-  },
   "autoload": {
     "psr-4": {
       "Carno\\Coroutine\\": "src"

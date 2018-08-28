@@ -3,14 +3,22 @@ language: php
 php:
 - '7.2'
 
+dist: trusty
+sudo: false
+
+cache:
+  directories:
+  - ~/.composer
+  - ~/.php-ext
+
+before_install:
+- source <(curl -sL https://github.com/carno-php/travis-ci/raw/master/tests-prepare.sh)
+
 install:
-- yes '' | pecl install swoole
-- composer install
+- composer update
 
 script:
-- php vendor/bin/phpunit tests --repeat 100
+- testing
 
 after_success:
-- composer require --dev php-coveralls/php-coveralls
-- php vendor/bin/phpunit tests --whitelist src --coverage-clover coverage.xml
-- php vendor/bin/php-coveralls -x coverage.xml -o coveralls.json
+- coveralls
