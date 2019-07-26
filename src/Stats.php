@@ -27,13 +27,13 @@ class Stats
      */
     public static function created() : void
     {
-        self::$running ++;
+        self::$running++;
     }
 
     /**
      */
     public static function finished() : void
     {
-        self::$running --;
+        self::$running--;
     }
 }

@@ -20,6 +20,6 @@ class IDGen
      */
     public static function next() : int
     {
-        return self::$current ++ >= PHP_INT_MAX ? self::$current = 1 : self::$current;
+        return self::$current++ >= PHP_INT_MAX ? self::$current = 1 : self::$current;
     }
 }

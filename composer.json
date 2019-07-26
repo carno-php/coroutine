@@ -2,7 +2,7 @@
   "name": "carno-php/coroutine",
   "license": "MIT",
   "require": {
-    "php": "^7.2",
+    "php": "^7.1",
     "carno-php/promise": "^1.0",
     "carno-php/timer": "^1.0"
   },
@@ -10,9 +10,7 @@
     "psr-4": {
       "Carno\\Coroutine\\": "src"
     },
-    "files": [
-      "src/cmds.php"
-    ]
+    "files": ["cmds.php"]
   },
   "autoload-dev": {
     "psr-4": {

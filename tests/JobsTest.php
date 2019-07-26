@@ -62,7 +62,7 @@ class JobsTest extends TestCase
 
         $to3->resolve();
 
-        $job->throw(new TimeoutException);
+        $job->throw(new TimeoutException());
 
         $to2->resolve();
 

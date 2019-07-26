@@ -23,6 +23,6 @@ trait Singleton
      */
     public static function process(Job $job) : void
     {
-        (self::$wkIns ?? self::$wkIns = new Worker)->accept($job)->run();
+        (self::$wkIns ?? self::$wkIns = new Worker())->accept($job)->run();
     }
 }

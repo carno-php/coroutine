@@ -23,7 +23,7 @@ class Queue
      */
     public function __construct()
     {
-        $this->jobs = new PQJobs;
+        $this->jobs = new PQJobs();
     }
 
     /**

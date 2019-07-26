@@ -24,7 +24,7 @@ class Worker
      */
     public function __construct()
     {
-        $this->scheduler = new Queue;
+        $this->scheduler = new Queue();
     }
 
     /**

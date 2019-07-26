@@ -99,9 +99,9 @@ class Job
         $this->p = $priority;
         $this->id = IDGen::next();
         $this->co = $co;
-        $this->ctx = $ctx ?? new Context;
+        $this->ctx = $ctx ?? new Context();
 
-        $this->chain = new SplStack;
+        $this->chain = new SplStack();
 
         ($this->ender = Promise::deferred())->catch(function (...$args) {
             $this->killed(...$args);
@@ -227,7 +227,7 @@ class Job
         $await->then(function ($r = null) {
             $this->wakeup($r);
         }, function (Throwable $e = null) {
-            $this->wakeup($e ?? new RejectedException);
+            $this->wakeup($e ?? new RejectedException());
         });
 
         return Signal::SLEEP;
@@ -273,7 +273,7 @@ class Job
     public function killed(Throwable $e = null) : void
     {
         $this->signal = Signal::KILL;
-        $this->result = $e = $e ?? new InterruptException;
+        $this->result = $e = $e ?? new InterruptException();
         $this->sleep instanceof Promised ? $this->sleep->throw($e) : $this->run();
     }
 

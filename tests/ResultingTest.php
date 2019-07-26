@@ -77,13 +77,13 @@ class ResultingTest extends TestCase
     {
         $fn = function ($int) {
             while ($int > 0) {
-                yield 'IG' => $int --;
+                yield 'IG' => $int--;
             }
         };
 
         go(function (int $start = 3) use ($fn) {
             foreach ($fn($start) as $got) {
-                $this->assertEquals($start --, $got);
+                $this->assertEquals($start--, $got);
             }
             $this->assertEquals(0, $start);
         });
